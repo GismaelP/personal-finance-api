@@ -1,0 +1,36 @@
+.status {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.dot {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 999px;
+  background: var(--muted);
+}
+
+.dot[data-status="ok"] {
+  background: var(--ok);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 20%, transparent);
+}
+
+.dot[data-status="error"] {
+  background: var(--error);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--error) 20%, transparent);
+}
+
+.label {
+  font-weight: 600;
+}
+
+.detail {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
